@@ -1,0 +1,13 @@
+DELIMITER $$
+
+CREATE PROCEDURE DeleteHRDept()
+BEGIN
+    DELETE FROM dept
+    WHERE dname = 'HR';
+END$$
+
+DELIMITER ;
+
+CALL DeleteHRDept();
+
+SELECT * FROM dept;
